@@ -13,12 +13,12 @@ var wss = null, sslSrv = null;
 // from the public folder 
 app.use(express.static('public'));
 
-app.use(function(req, res, next) {
+/*app.use(function(req, res, next) {
   if(req.headers['x-forwarded-proto']==='http') {
     return res.redirect(['https://', req.get('Host'), req.url].join(''));
   }
   next();
-});
+});*/
 
 // start server (listen on port 443 - SSL)
 sslSrv = http.createServer(app).listen(process.env.PORT||443);
