@@ -1,6 +1,6 @@
 const WebSocketServer = require('ws').Server,
   express = require('express'),
-  https = require('https'),
+  http = require('http'),
   app = express(),
   fs = require('fs');
 
